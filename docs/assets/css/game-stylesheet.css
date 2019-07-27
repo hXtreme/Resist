@@ -3,7 +3,6 @@
   display: grid;
   grid-column-gap: 30px;
   grid-template: auto / repeat(5, minmax(100px, 1fr));
-  /* repeat(5, minmax(100px, 1fr)) */
 }
 
 .game-details {
@@ -12,6 +11,7 @@
   padding-right: 3em;
   padding-top: 0.3em;
   padding-bottom: 0.5em;
+  justify-items: center;
   display: grid;
   grid-template-areas: "Total Total RestartGame"
                        "Resistance Spy SelectGame";
@@ -41,10 +41,9 @@
 
 button {
   height: 2em;
-  width: 10em;
+  width: 17em;
   padding-left: 4px;
   padding-right: 4px;
-  margin-left: 2em;
 }
 
 img {
@@ -72,5 +71,21 @@ img {
                          "Resistance Resistance"
                          "Spy Spy"
                          "RestartGame SelectGame";
+  }
+  button {
+    width: 90%
+  }
+}
+
+@media (max-width: 360px) {
+  .game-details {
+    grid-template-areas: "Total"
+                         "Resistance"
+                         "Spy"
+                         "RestartGame"
+                         "SelectGame";
+  }
+  button {
+    width: 70%;
   }
 }
