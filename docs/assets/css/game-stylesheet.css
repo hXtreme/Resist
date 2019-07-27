@@ -12,6 +12,7 @@
   grid-template-areas: "Total Total"
                        "Resistance Spy"
                        "NewGame Reset";
+  grid-column-gap: 1em;
 }
 
 #total-players {
@@ -28,13 +29,11 @@
 
 #restart-game {
   grid-area: NewGame;
-  width: 8em;
   height: 2em;
 }
 
 #select-game {
   grid-area: Reset;
-  width: 8em
   height: 2em;
 }
 
