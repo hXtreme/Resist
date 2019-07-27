@@ -53,6 +53,12 @@ img {
 
 /* When we deal with various screen size and orientation */
 
+@media (min-width: 700px) {
+  button {
+    justify-self: end;
+  }
+}
+
 @media (max-width: 700px) {
   .game-board {
     margin-top: 1em;
@@ -67,6 +73,7 @@ img {
   .game-details {
     padding-left: 0;
     padding-right: 0;
+    justify-items: center;
     grid-template-areas: "Total Total"
                          "Resistance Resistance"
                          "Spy Spy"
@@ -74,10 +81,11 @@ img {
   }
   button {
     width: 90%
+    justify-self: center;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 470px) {
   .game-details {
     grid-template-areas: "Total"
                          "Resistance"
@@ -87,5 +95,6 @@ img {
   }
   button {
     width: 80%;
+    justify-self: center;
   }
 }
