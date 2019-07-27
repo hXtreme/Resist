@@ -12,9 +12,17 @@
   <body>
     <article class="markdown-body">
       <h1>Resistance</h1>
-      <h4 id="player-count">
-        X Players
-      </h4>
+      <div class="game-details">
+        <span id="total-players">X</span>
+        <span id="resistance-players">Y</span>
+        <span id="spy-players">Z</span>
+        <button type="button" id="restart-game" onclick="restartGame()">
+          Restart Game
+        </button>
+        <button type="button" id="select-game" onclick="selectGame()">
+          Select Game
+        </button>
+      </div>
       <hr>
       <div class="game-board">
         <span></span>
@@ -23,7 +31,7 @@
             <!-- Special Notes About the mission -->
             1 Fail
           </div>
-          <img class="mission-status">
+          <img class="mission-status" onClick="changeMissionStatus(0)" src="assets/svg/ring.svg">
             <!-- Mission Status: Incomplete, Pass, Fail -->
           </img>
           <div class="mission-players">
@@ -36,7 +44,7 @@
             <!-- Special Notes About the mission -->
             1 Fail
           </div>
-          <img class="mission-status">
+          <img class="mission-status" onClick="changeMissionStatus(1)" src="assets/svg/ring.svg">
             <!-- Mission Status: Incomplete, Pass, Fail -->
           </img>
           <div class="mission-players">
@@ -49,7 +57,7 @@
             <!-- Special Notes About the mission -->
             1 Fail
           </div>
-          <img class="mission-status">
+          <img class="mission-status" onClick="changeMissionStatus(2)" src="assets/svg/ring.svg">
             <!-- Mission Status: Incomplete, Pass, Fail -->
           </img>
           <div class="mission-players">
@@ -62,7 +70,7 @@
             <!-- Special Notes About the mission -->
             1 Fail
           </div>
-          <img class="mission-status">
+          <img class="mission-status" onClick="changeMissionStatus(3)" src="assets/svg/ring.svg">
             <!-- Mission Status: Incomplete, Pass, Fail -->
           </img>
           <div class="mission-players">
@@ -75,7 +83,7 @@
             <!-- Special Notes About the mission -->
             2 Fail
           </div>
-          <img class="mission-status">
+          <img class="mission-status" onClick="changeMissionStatus(4)" src="assets/svg/ring.svg">
             <!-- Mission Status: Incomplete, Pass, Fail -->
           </img>
           <div class="mission-players">
@@ -85,6 +93,9 @@
           <span></span>
         </div>
       </div>
+      <button type="button" name="button" onclick="runCheck()">Check</button>
     </article>
+    <script type="text/javascript" src="assets/js/main.js">
+    </script>
   </body>
 </html>
