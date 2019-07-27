@@ -1,18 +1,21 @@
 .game-board {
+  margin-top: 3em;
   display: grid;
-  grid-column-gap: 3em;
-  grid-template-columns: 3fr 4fr 4fr 4fr 4fr 4fr 3fr;
+  grid-column-gap: 2.4em;
+  grid-template-columns: 1fr 4fr 4fr 4fr 4fr 4fr 1fr;
 }
 
 .game-details {
   width: 100%;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 40%;
+  padding-right: 20%;
+  padding-top: 0.3em;
+  padding-bottom: 0.5em;
   display: grid;
-  grid-template-areas: "Total Total"
-                       "Resistance Spy"
-                       "NewGame Reset";
-  grid-column-gap: 1em;
+  grid-template-areas: "Total Total RestartGame"
+                       "Resistance Spy SelectGame";
+  grid-row-gap: 0.5em;
+  border-bottom: 3px double #eee;
 }
 
 #total-players {
@@ -28,13 +31,18 @@
 }
 
 #restart-game {
-  grid-area: NewGame;
-  height: 2em;
+  grid-area: RestartGame;
 }
 
 #select-game {
-  grid-area: Reset;
+  grid-area: SelectGame;
+}
+
+button {
   height: 2em;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-left: 2em;
 }
 
 img {
