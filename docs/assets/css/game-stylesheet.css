@@ -61,14 +61,15 @@ img {
 
 @media (max-width: 700px) {
   .game-board {
-    margin-top: 1em;
+    margin-top: 0.2em;
     grid-template: repeat(5, minmax(100px, 1fr)) / auto;
   }
   img {
     width: 8em;
   }
   .game-mission {
-    border-bottom: 2px solid #eee;
+    margin: 0.2em 0;
+    border-bottom: 1px solid #eee;
   }
   .game-details {
     padding-left: 0;
