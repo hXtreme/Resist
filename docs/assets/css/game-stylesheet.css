@@ -1,14 +1,15 @@
 .game-board {
   margin-top: 3em;
   display: grid;
-  grid-column-gap: 2.4em;
-  grid-template-columns: 1fr 4fr 4fr 4fr 4fr 4fr 1fr;
+  grid-column-gap: 30px;
+  grid-template: auto / repeat(5, minmax(100px, 1fr));
+  /* repeat(5, minmax(100px, 1fr)) */
 }
 
 .game-details {
   width: 100%;
-  padding-left: 40%;
-  padding-right: 20%;
+  padding-left: 3em;
+  padding-right: 3em;
   padding-top: 0.3em;
   padding-bottom: 0.5em;
   display: grid;
@@ -40,11 +41,36 @@
 
 button {
   height: 2em;
+  width: 10em;
   padding-left: 4px;
   padding-right: 4px;
   margin-left: 2em;
 }
 
 img {
+  padding: 0.5em 0;
   width: 5em;
+}
+
+/* When we deal with various screen size and orientation */
+
+@media (max-width: 700px) {
+  .game-board {
+    margin-top: 1em;
+    grid-template: repeat(5, minmax(100px, 1fr)) / auto;
+  }
+  img {
+    width: 8em;
+  }
+  .game-mission {
+    border-bottom: 2px solid #eee;
+  }
+  .game-details {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-areas: "Total Total"
+                         "Resistance Resistance"
+                         "Spy Spy"
+                         "RestartGame SelectGame";
+  }
 }
